@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>my-app</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-RELEASE</version>
+  <name>my-app Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+      <repository>
+          <id>sonar-releases</id>
+          <url>https://repo1.maven.org/maven2/</url>
+      </repository>
+  </repositories>
+
+   <properties>
+       <!-- SonarQube analysis properties -->
+       <sonar.host.url>http://18.220.117.65:9000/</sonar.host.url> 
+       <sonar.projectKey>my-app</sonar.projectKey>
+       <sonar.projectName>My App</sonar.projectName>
+       <sonar.sources>src/main</sonar.sources>
+       <sonar.tests>src/test</sonar.tests>
+       <sonar.login>admin</sonar.login>
+       <sonar.password>hadari</sonar.password>           
+  </properties>
+
+<distributionManagement>
+     <repository>
+        <id>nexus</id>
+        <name>hadari</name>
+	<url>http://18.191.220.236:8081/repository/hadari/</url>
+     </repository>
+
+    <snapshotRepository>
+       <id>nexus</id>
+       <name>hadari-snapshot</name>
+       <url>http://18.191.220.236:8081/repository/hadari-snapshot/</url>
+    </snapshotRepository> 
+  </distributionManagement>
+
+<!--<properties>
+	 <jdk.version>1.8</jdk.version>
+	 <spring.version>5.1.2.RELEASE</spring.version>
+	 <junit.version>4.11</junit.version>
+	 <log4j.version>1.2.17</log4j.version>
+         <sonar.host.url>http://18.220.117.65:9000/</sonar.host.url> 
+         <sonar.login>admin</sonar.login>
+         <sonar.password>abron</sonar.password> 
+	 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	 <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+-->	
+<build>
+    <finalName>my-app</finalName>
+    <plugins>
+
+	<plugin>
+	   <groupId>org.apache.tomcat.maven</groupId>
+	   <artifactId>tomcat7-maven-plugin</artifactId>
+	   <version>2.2</version> 
+	   <configuration>
+	       <url>http://3.129.57.76:8080/manager/text</url>
+	       <server>TomcatServer</server>
+	   </configuration>
+        </plugin>
+
+        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.8.0.1744</version>
+        </plugin>
+   </plugins>
+ </build>
+</project>
