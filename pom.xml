@@ -69,7 +69,7 @@
 	   <artifactId>tomcat7-maven-plugin</artifactId>
 	   <version>2.2</version> 
 	   <configuration>
-	       <url>http://3.129.57.76:8080/manager/text</url>
+	       <url>http://18.222.58.177:8080/manager/text</url>
 	       <server>TomcatServer</server>
 	   </configuration>
         </plugin>
