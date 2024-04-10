@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		    <title>Congratulations!</title>
+		    <title>Congratulations, Seyram!</title>
 		        <style>
         body {
 		            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
