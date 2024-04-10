@@ -19,13 +19,13 @@
   <repository>
       <id>nexus</id>
       <name>Abron2</name>
-      <url>http://13.58.103.23:8081/repository/Abron2/</url>
+      <url>http://3.21.114.254:8081/repository/Abron2/</url>
   </repository>
 
   <snapshotRepository>
       <id>nexus</id>
       <name>Abron3</name>
-      <url>http://13.58.103.23:8081/repository/Abron3/</url>
+      <url>http://3.21.114.254:8081/repository/Abron3/</url>
    </snapshotRepository>
   </distributionManagement>
 
@@ -38,7 +38,7 @@
     
   <properties>
       <!-- SonarQube analysis properties -->
-      <sonar.host.url>http://3.17.188.109:9000/</sonar.host.url> 
+      <sonar.host.url>http://18.116.61.42:9000/</sonar.host.url> 
       <sonar.projectKey>my-app</sonar.projectKey>
       <sonar.projectName>My App</sonar.projectName>
       <sonar.sources>src/main</sonar.sources>
@@ -55,7 +55,7 @@
             <artifactId>tomcat7-maven-plugin</artifactId>
             <version>2.2</version> 
             <configuration>
-                <url>http://3.132.216.113:8080/manager/text</url> 
+                <url>http://52.14.86.184:8080/manager/text</url> 
                 <server>TomcatServer</server>
            </configuration>
    </plugin>
